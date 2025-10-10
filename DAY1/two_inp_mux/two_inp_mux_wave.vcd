@@ -1,0 +1,56 @@
+$date
+	Fri Oct 10 10:28:44 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module two_inp_mux_tb $end
+$var wire 1 ! c $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ s $end
+$scope module uut $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 ! c $end
+$var wire 1 $ s $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#1
+1#
+#2
+1!
+0#
+1"
+#3
+1#
+#4
+0!
+1$
+0#
+0"
+#5
+1!
+1#
+#6
+0!
+0#
+1"
+#7
+1!
+1#
+#8
