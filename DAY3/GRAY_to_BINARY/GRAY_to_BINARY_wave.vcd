@@ -1,0 +1,138 @@
+$date
+	Sun Oct 12 18:20:22 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module GRAY_to_BINARY_tb $end
+$var wire 4 ! g [3:0] $end
+$var wire 1 " b3 $end
+$var wire 1 # b2 $end
+$var wire 1 $ b1 $end
+$var wire 1 % b0 $end
+$var wire 4 & b [3:0] $end
+$var reg 1 ' g0 $end
+$var reg 1 ( g1 $end
+$var reg 1 ) g2 $end
+$var reg 1 * g3 $end
+$scope module dut $end
+$var wire 1 % b0 $end
+$var wire 1 $ b1 $end
+$var wire 1 # b2 $end
+$var wire 1 " b3 $end
+$var wire 1 ' g0 $end
+$var wire 1 ( g1 $end
+$var wire 1 ) g2 $end
+$var wire 1 * g3 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0*
+0)
+0(
+0'
+b0 &
+0%
+0$
+0#
+0"
+b0 !
+$end
+#10
+b1 &
+1%
+b1 !
+1'
+#20
+b11 &
+1$
+0'
+b10 !
+1(
+#30
+b10 &
+0%
+b11 !
+1'
+#40
+1%
+b111 &
+1#
+0'
+0(
+b100 !
+1)
+#50
+b110 &
+0%
+b101 !
+1'
+#60
+b100 &
+0$
+0'
+b110 !
+1(
+#70
+b101 &
+1%
+b111 !
+1'
+#80
+1$
+0'
+0(
+0)
+b1000 !
+b1111 &
+1"
+1*
+#90
+b1110 &
+0%
+b1001 !
+1'
+#100
+b1100 &
+0$
+0'
+b1010 !
+1(
+#110
+b1101 &
+1%
+b1011 !
+1'
+#120
+0%
+b1000 &
+0#
+0'
+0(
+b1100 !
+1)
+#130
+b1001 &
+1%
+b1101 !
+1'
+#140
+b1011 &
+1$
+0'
+b1110 !
+1(
+#150
+b1010 &
+0%
+b1111 !
+1'
+#160
