@@ -1,0 +1,68 @@
+$date
+	Sat Oct 11 12:27:26 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module FullA_USING_2HalfA_tb $end
+$var wire 1 ! z $end
+$var wire 1 " y $end
+$var wire 1 # x $end
+$var wire 1 $ sum $end
+$var wire 1 % carry $end
+$var reg 1 & a $end
+$var reg 1 ' b $end
+$var reg 1 ( c $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+1$
+1(
+#20
+1#
+0(
+1'
+#30
+1%
+1"
+0$
+1(
+#40
+0%
+0"
+1$
+0(
+0'
+1&
+#50
+1%
+1"
+0$
+1(
+#60
+0"
+0#
+1!
+0(
+1'
+#70
+1$
+1(
+#80
