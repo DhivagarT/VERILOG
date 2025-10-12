@@ -1,5 +1,5 @@
 $date
-	Sun Oct 12 14:49:01 2025
+	Sun Oct 12 18:36:24 2025
 $end
 $version
 	Icarus Verilog
@@ -20,7 +20,7 @@ $scope module dut $end
 $var wire 1 % b0 $end
 $var wire 1 & b1 $end
 $var wire 1 ' b2 $end
-$var wire 1 ) b3 $end
+$var wire 1 ( b3 $end
 $var wire 1 $ g0 $end
 $var wire 1 # g1 $end
 $var wire 1 " g2 $end
@@ -33,42 +33,69 @@ $dumpall
 $end
 #0
 $dumpvars
-z)
 0(
 0'
 0&
 0%
 0$
 0#
-x"
-z!
+0"
+0!
 $end
 #5
-1(
+1$
+1%
 #10
 1#
-0(
-1'
-#15
-1(
-#20
-1$
-0(
-0'
+0%
 1&
+#15
+0$
+1%
+#20
+1"
+0%
+0&
+1'
 #25
-1(
+1$
+1%
 #30
 0#
-0(
-1'
+0%
+1&
 #35
-1(
-#40
-0(
-0'
-0&
+0$
 1%
-#45
+#40
+0%
+0&
+0'
+1!
 1(
+#45
+1$
+1%
 #50
+1#
+0%
+1&
+#55
+0$
+1%
+#60
+0"
+0%
+0&
+1'
+#65
+1$
+1%
+#70
+0#
+0%
+1&
+#75
+0$
+1%
+#80

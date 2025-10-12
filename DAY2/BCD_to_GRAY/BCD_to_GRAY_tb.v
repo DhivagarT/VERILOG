@@ -6,15 +6,27 @@ wire g3,g2,g1,g0;
 BCD_to_GRAY dut(.b3(b3),.b2(b2),.b1(b1),.b0(b0),.g3(g3),.g2(g2),.g1(g1),.g0(g0));     
 
 initial begin
-$monitor("b3=%b b2=%b b1=%b b0=%b g3=%b g2=%b g1=%b g0=%b",b3,b2,b1,b0,g3,g2,g1,g0);
+$monitor("Time=%0t |b3=%b |b2=%b |b1=%b |b0=%b |g3=%b |g2=%b |g1=%b |g0=%b",$time,b3,b2,b1,b0,g3,g2,g1,g0);
 $dumpfile("BCD_to_GRAY_wave.vcd");
 $dumpvars(0,BCD_to_GRAY_tb);
 
-initial begin
-for(i=0; i<10; i=i+1) begin
-{b3,b2,b1,b0} = i;
+   b3=0;b2=0;b1=0;b0=0; 
+#5 b3=0;b2=0;b1=0;b0=1; 
+#5 b3=0;b2=0;b1=1;b0=0; 
+#5 b3=0;b2=0;b1=1;b0=1; 
+#5 b3=0;b2=1;b1=0;b0=0; 
+#5 b3=0;b2=1;b1=0;b0=1; 
+#5 b3=0;b2=1;b1=1;b0=0; 
+#5 b3=0;b2=1;b1=1;b0=1; 
+#5 b3=1;b2=0;b1=0;b0=0; 
+#5 b3=1;b2=0;b1=0;b0=1; 
+#5 b3=1;b2=0;b1=1;b0=0; 
+#5 b3=1;b2=0;b1=1;b0=1; 
+#5 b3=1;b2=1;b1=0;b0=0; 
+#5 b3=1;b2=1;b1=0;b0=1; 
+#5 b3=1;b2=1;b1=1;b0=0; 
+#5 b3=1;b2=1;b1=1;b0=1; 
 #5;
-end    
-end 
+end
 endmodule
 
