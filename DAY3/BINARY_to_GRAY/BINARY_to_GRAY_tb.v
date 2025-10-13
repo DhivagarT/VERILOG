@@ -2,11 +2,11 @@ module BINARY_to_GRAY_tb;
 reg b3,b2,b1,b0;
 wire g3,g2,g1,g0;
 
-BINARY_to_GRAY uut(.g3(g3),.g2(g2),.g1(g1),.g0(g0),.b3(b3),.b2(b2),.b1(b1),.b0(b0));
+BINARY_to_GRAY uut(.b3(b3),.b2(b2),.b1(b1),.b0(b0),.g3(g3),.g2(g2),.g1(g1),.g0(g0));
 
 
 initial begin
-$monitor("Time=%0t |g3=%b |g2=%b |g1=%b |g0=%b |b3=%b |b2=%b |b1=%b |b0=%b",$time,g3,g2,g1,g0,b3,b2,b1,b0);
+$monitor("Time=%0t |b3=%b |b2=%b |b1=%b |b0=%b |g3=%b |g2=%b |g1=%b |g0=%b",$time,b3,b2,b1,b0,g3,g2,g1,g0);
 $dumpfile("BINARY_to_GRAY_wave.vcd");
 $dumpvars(0,BINARY_to_GRAY_tb);
 
