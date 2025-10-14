@@ -1,0 +1,9 @@
+*.vcd
+*.wlf
+*.fst
+*.vvp
+*.out
+*.log
+.vscode/
+.idea/
+.DS_Store
