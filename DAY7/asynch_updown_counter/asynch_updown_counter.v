@@ -1,5 +1,5 @@
 module asynch_updown_counter(input [3:0]d,input clk,rst,enb,output reg [3:0]q);
-always@(posedge clk or negedge rst)begin
+always@(negedge rst or posedge clk )begin
 	if(!rst)
 		q<=4'b0000;
 
