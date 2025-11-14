@@ -1,0 +1,62 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x64cbfee43560 .scope module, "power_of_two" "power_of_two" 2 1;
+ .timescale 0 0;
+v0x64cbfee8c990_0 .var "a", 7 0;
+v0x64cbfee8ca90_0 .var "result", 0 0;
+S_0x64cbfee436f0 .scope function.vec4.s1, "is_pow2" "is_pow2" 2 5, 2 5 0, S_0x64cbfee43560;
+ .timescale 0 0;
+; Variable is_pow2 is vec4 return value of scope S_0x64cbfee436f0
+v0x64cbfee8c8b0_0 .var "x", 7 0;
+TD_power_of_two.is_pow2 ;
+    %load/vec4 v0x64cbfee8c8b0_0;
+    %pad/u 32;
+    %cmpi/ne 0, 0, 32;
+    %flag_get/vec4 4;
+    %jmp/0 T_0.2, 4;
+    %load/vec4 v0x64cbfee8c8b0_0;
+    %pad/u 32;
+    %load/vec4 v0x64cbfee8c8b0_0;
+    %pad/u 32;
+    %subi 1, 0, 32;
+    %and;
+    %pushi/vec4 0, 0, 32;
+    %cmp/e;
+    %flag_get/vec4 4;
+    %and;
+T_0.2;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 1, 0, 1;
+    %ret/vec4 0, 0, 1;  Assign to is_pow2 (store_vec4_to_lval)
+    %jmp T_0.1;
+T_0.0 ;
+    %pushi/vec4 0, 0, 1;
+    %ret/vec4 0, 0, 1;  Assign to is_pow2 (store_vec4_to_lval)
+T_0.1 ;
+    %end;
+    .scope S_0x64cbfee43560;
+T_1 ;
+    %pushi/vec4 16, 0, 8;
+    %store/vec4 v0x64cbfee8c990_0, 0, 8;
+    %load/vec4 v0x64cbfee8c990_0;
+    %store/vec4 v0x64cbfee8c8b0_0, 0, 8;
+    %callf/vec4 TD_power_of_two.is_pow2, S_0x64cbfee436f0;
+    %store/vec4 v0x64cbfee8ca90_0, 0, 1;
+    %vpi_call 2 18 "$display", "a=%0d  power_of_2=%0d", v0x64cbfee8c990_0, v0x64cbfee8ca90_0 {0 0 0};
+    %delay 10, 0;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "power_of_2.v";

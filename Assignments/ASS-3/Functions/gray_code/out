@@ -1,0 +1,44 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x6345df0cea00 .scope module, "gray_code_4bit" "gray_code_4bit" 2 1;
+ .timescale 0 0;
+v0x6345df0f1ff0_0 .var "a", 3 0;
+v0x6345df0f20f0_0 .var "g", 3 0;
+S_0x6345df0a9590 .scope function.vec4.s4, "gray" "gray" 2 5, 2 5 0, S_0x6345df0cea00;
+ .timescale 0 0;
+; Variable gray is vec4 return value of scope S_0x6345df0a9590
+v0x6345df0f1f10_0 .var "x", 3 0;
+TD_gray_code_4bit.gray ;
+    %load/vec4 v0x6345df0f1f10_0;
+    %load/vec4 v0x6345df0f1f10_0;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %shiftr 4;
+    %xor;
+    %ret/vec4 0, 0, 4;  Assign to gray (store_vec4_to_lval)
+    %end;
+    .scope S_0x6345df0cea00;
+T_1 ;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0x6345df0f1ff0_0, 0, 4;
+    %load/vec4 v0x6345df0f1ff0_0;
+    %store/vec4 v0x6345df0f1f10_0, 0, 4;
+    %callf/vec4 TD_gray_code_4bit.gray, S_0x6345df0a9590;
+    %store/vec4 v0x6345df0f20f0_0, 0, 4;
+    %vpi_call 2 15 "$display", "a=%b gray=%b", v0x6345df0f1ff0_0, v0x6345df0f20f0_0 {0 0 0};
+    %delay 10, 0;
+    %vpi_call 2 17 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "gray_code.v";
