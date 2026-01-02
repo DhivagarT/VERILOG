@@ -1,6 +1,6 @@
 module Dual_Port_RAM #(
-parameter ADDR=8,
 parameter DATA=4,
+parameter ADDR=$clog2(DEPTH),
 parameter DEPTH=16)
 //port A
 (input clk_a,
