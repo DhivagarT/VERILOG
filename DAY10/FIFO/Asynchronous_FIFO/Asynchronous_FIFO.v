@@ -73,5 +73,6 @@ module Asynchronous_fifo #(
 
     // Full: Gray code wrap-around logic
     assign wr_full  = (wr_gpntr == {~rd_pnt_g2[depth_log:depth_log-1], rd_pnt_g2[depth_log-2:0]});
+    //NORMAL FULL wr_full=(rd_pntr=={~wr_pntr[3]&&wr_pntr[2:0]});
 
 endmodule
